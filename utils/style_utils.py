@@ -16,6 +16,7 @@ PRE_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
 def style_target_preprocess(style_target, size=512, batchsize=128):
     transform = T.Compose([
         T.Resize(size),
+        T.CenterCrop(size)
         T.ToTensor(),
         T.Normalize(mean=PRE_MEAN.tolist(),
                     std=PRE_STD.tolist()),
@@ -63,10 +64,10 @@ def gram_matrix(features, normalize=True):
         gram /= H * W * C
     return gram
 
-def style_loss(feats, style_layers, style_targets, style_weights, batchsize=128):
+def style_loss(feats, style_feats, style_weights, batchsize=128):
     loss = 0.0
-    for i in range(len(style_layers)):
-        loss += style_weights[i] * torch.sum((gram_matrix(feats[style_layers[i]]) - style_targets[i])**2)
+    for i in range(len(feats)):
+        loss += style_weights[i] * torch.sum((gram_matrix(feats[i]) - gram_matrix(style_feats[i]))**2)
     return loss / batchsize
 
 def tv_loss(img, tv_weight, batchsize=128):
