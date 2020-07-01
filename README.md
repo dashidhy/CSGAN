@@ -1,12 +1,12 @@
-# StyleGAN: Large Scale Style Transfer Using Generative Adversarial Networks
+# CSGAN: Content with Style Generating Using Generative Adversarial Networks
 
-This repository is built for the paper [StyleGAN: Large Scale Style Transfer Using Generative Adversarial Networks](https://github.com/dashidhy/styleGAN/blob/master/paper/StyleGAN.pdf). Please refer to it for more details.
+This repository is built for my small but interesting project CSGAN. Please refer to my [technical report](./paper/CSGAN.pdf) for more details.
 
 <div align='center'>
-  <img src='https://github.com/dashidhy/styleGAN/raw/master/images/candy_112.jpg?sanitize=true' height="350px">
-  <img src='https://github.com/dashidhy/styleGAN/raw/master/images/muse_112.jpg?sanitize=true' height="350px">
-  <img src='https://github.com/dashidhy/styleGAN/raw/master/images/mosaic_112.jpg?sanitize=true' height="350px">
-  <img src='https://github.com/dashidhy/styleGAN/raw/master/images/udnie_112.jpg?sanitize=true' height="350px">
+  <img src='./images/candy_112.jpg' height="350px">
+  <img src='./images/muse_112.jpg' height="350px">
+  <img src='./images/mosaic_112.jpg' height="350px">
+  <img src='./images/udnie_112.jpg' height="350px">
 </div>
 
 ## Prerequisites
@@ -42,8 +42,8 @@ This repository is built for the paper [StyleGAN: Large Scale Style Transfer Usi
 - Clone this repo:
 
 ```bash
-git clone -b master --single-branch https://github.com/dashidhy/styleGAN.git
-cd ./styleGAN
+git clone -b master --single-branch https://github.com/dashidhy/CSGAN.git
+cd ./CSGAN
 ```
 
 - Make sure you have all prerequisites ready
